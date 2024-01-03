@@ -13,4 +13,12 @@ class Post extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    //modeldeki bu fonksiyonu override yapmış olduk ders 124
+    public function getRouteKeyName()
+    {
+     
+        return 'slug';
+        
+    }
 }
